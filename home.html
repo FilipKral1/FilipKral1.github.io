@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Hasiči Praha Suchdol</title>
+        <link rel="icon" href="https://hasis2.000webhostapp.com/images/icon.png"/>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="dark-mode.css"/>
+        <style>
+            /*BASIC STYLE*/
+/*
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+            *{
+                font-family: "Roboto";
+            }
+*/
+            path{
+                transition: 0.3s ease;
+            }
+            #facebook svg:hover path{
+                fill: #4267B2;
+            }
+            #instagram svg:hover path{
+                fill: #C13584;   
+            }
+            
+            
+            
+            
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:#000;
+  stroke-width:5.5;
+  stroke-linecap:round;
+}
+            
+            
+            
+/*
+            .ham6{
+                padding: 0;
+                margin: 0;
+                width: 50px;
+                height: 30px;
+            }
+*/
+            
+            .ham6 .top {
+  stroke-dasharray: 40 172;
+}
+.ham6 .middle {
+  stroke-dasharray: 40 111;
+}
+.ham6 .bottom {
+  stroke-dasharray: 40 172;
+}
+#menuButton.active .ham6 .top {
+  stroke-dashoffset: -132px;
+}
+#menuButton.active .ham6 .middle {
+  stroke-dashoffset: -71px;
+}
+#menuButton.active .ham6 .bottom {
+  stroke-dashoffset: -132px;
+}
+            #sun-fill, #moon{
+                display: inline-block;
+            }
+            #sun, #moon-fill{
+                display: none;
+            }
+            
+            #darkSwitch[type=checkbox]:checked + #sun{
+                display: inline-block;
+            }
+            #darkSwitch[type=checkbox]:checked + svg + #sun-fill{
+                display: none;
+            }
+            #darkSwitch[type=checkbox]:checked + svg + svg + #moon{
+                display: none;
+            }
+            #darkSwitch[type=checkbox]:checked + svg + svg + svg + #moon-fill{
+                display: inline-block;
+            }
+            
+            
+            /*EDITABLE FROM SERVER???*/
+            /*SLIDESHOW IMAGES*/
+            .img1{
+                margin: 0;
+                padding: 0;
+                height: 75vh;
+                background: url("http://hasici.praha-suchdol.cz/foto-2018/MFM-2018/002.jpg");
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .img2{
+                margin: 0;
+                padding: 0;
+                height: 75vh;
+                background: url("http://hasici.praha-suchdol.cz/foto-2018/MFM-2018/015.jpg");
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .img3{
+                margin: 0;
+                padding: 0;
+                height: 75vh;
+                background: url("http://hasici.praha-suchdol.cz/foto-2018/MFM-2018/016.jpg");
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            /*CARD IMAGES*/
+            .img4{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 30vh;
+                background: url("http://hasici.praha-suchdol.cz/foto-2018/MFM-2018/016.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .img5{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 30vh;
+                background: url("http://hasici.praha-suchdol.cz/foto-2018/MFM-2018/002.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .img6{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 30vh;
+                background: url("http://hasici.praha-suchdol.cz/foto-2018/MFM-2018/015.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .img7{
+                margin: 0;
+                padding: 0;
+                height: 75vh;
+                background: url("http://hasici.praha-suchdol.cz/foto-2018/MFM-2018/017.jpg");
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+        
+        <!-- SLIDESHOW -->
+        <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#slideshow" data-bs-slide-to="3"></button>
+  </div>
+
+  <div class="carousel-inner" style="height: 75vh; width: 100vw padding:0; margin: 0;">
+    <div class="carousel-item active">
+        <div class="d-block w-100 img1"></div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-block w-100 img2"></div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-block w-100 img3"></div>
+    </div>
+      <div class="carousel-item">
+      <div class="d-block w-100 img7"></div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+        
+        
+        <!-- MENU add links and custom colors with day/night -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://hasis2.000webhostapp.com/images/icon.png" alt="" width="32" height="30" class="d-inline-block align-text-top">
+      Hasiči Praha Suchdol
+    </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menuButton" onclick="this.classList.toggle('active')">
+      
+      <svg class="ham ham6" viewBox="0 0 100 100" width="30">
+  <path
+        class="line top"
+        d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+  <path
+        class="line middle"
+        d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+  <path
+        class="line bottom"
+        d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+</svg>
+      
+      </button>
+      
+      
+      
+<!--
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menuButton">
+          <svg viewBox="0 0 800 600" class="" id="mobileMenuSVG">
+  <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" class="top_bar" />
+
+  <path d="M300,320 L540,320" class="middle_bar" />
+
+  <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" class="bottom_bar" transform="translate(480, 320) scale(1, -1) translate(-480, -318)" />
+</svg>
+-->
+
+<!--      <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+      
+      <!-- MENU LINKS -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active closable" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sbor
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="sbor.html">Sbor</a></li>
+            <li><a class="dropdown-item" href="#">Historie</a></li>
+              <li><a class="dropdown-item" href="#">Memoriál Františka Malého</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Jednotka
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Jednotka</a></li>
+            <li><a class="dropdown-item" href="#">Technika</a></li>
+            <li><a class="dropdown-item disabled" href="#">Výjezdy</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tab-index="-1" aria-disabled="true">Galerie</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link closable" href="#kontakty">Kontakty</a>
+        </li>
+            <li class="nav-item pe-5 d-flex aligns-items-center">
+                <div class="form-check form-switch pt-2" id="dayNightButton">
+  <input class="form-check-input" type="checkbox" id="darkSwitch">
+<!--  <label class="form-check-label" for="darkSwitch">-->
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="sun" viewBox="0 0 16 16">
+  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+</svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="sun-fill" viewBox="0 0 16 16">
+  <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+</svg>
+      /
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="moon" viewBox="0 0 16 16">
+  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+</svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="moon-fill" viewBox="0 0 16 16">
+  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+</svg>
+      
+      
+<!--                    </label>-->
+</div>
+
+            </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        
+<!-- CARDS -->
+        
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 mt-5 mx-auto">
+  <div class="col">
+    <div class="card m-3">
+      <img src="http://via.placeholder.com/300x240" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card m-3">
+      <img src="http://via.placeholder.com/300x240" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card m-3">
+      <img src="http://via.placeholder.com/300x240" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card m-3">
+        <div class="card-img-top img4"></div>
+<!--      <img src="http://via.placeholder.com/300x240" class="card-img-top" alt="...">-->
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <a href="#" class="btn btn-outline-dark mb-3">Go somewhere</a>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+             <div class="col">
+    <div class="card m-3">
+        <div class="card-img-top img5"></div>
+<!--      <img src="http://via.placeholder.com/300x240" class="card-img-top" alt="...">-->
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+             <div class="col">
+    <div class="card m-3">
+        <div class="card-img-top img6"></div>
+<!--      <img src="http://via.placeholder.com/300x240" class="card-img-top" alt="...">-->
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        <!-- MAPA -->
+        
+        <h1 class="display-4 m-4">Mapa</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5205.7912714980275!2d14.378169812697712!3d50.1337884592405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470beaa2fc52f8a3%3A0x9f1d36717226ec82!2sHasi%C4%8Di%20Praha-Suchdol!5e0!3m2!1scs!2scz!4v1653406706896!5m2!1scs!2scz" class="w-100 h-70 my-5" style="margin: 0; padding: 0;" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <!-- KONTAKTY -->
+        
+        <footer id="kontakty">
+            <h1 class="display-4 m-4">Kontakty</h1>
+            <div class="row row-cols-1 row-cols-md-2 m-0 p-0">
+                <div class="w-100 my-4" align="center">
+                    <a id="facebook" class="m-5" href="https://www.facebook.com/sdh.suchdol/">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70" viewBox="0 0 50 50" style="fill: black;">
+                <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
+                </svg></a>
+                    
+                    <a id="instagram" class="m-5" href="https://www.instagram.com/hasici.suchdol/">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70" viewBox="0 0 50 50" style="fill: black;">
+                    <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                    </path>
+                </svg>
+             </a>
+                </div>
+                <div class="col m-auto my-4 lead" align="center">
+                    <h2 class="lead"><b>Jednotka sboru dobrovolných hasičů</b></h2>
+                    <p>Velitel jednotky: <b>Jakub Bárta</b></p>
+                    <p>Telefon: <a href="tel:+420 773 621 532">+420 773 621 532</a></p>
+                    <p>E-mail: <a href="mailto:jsdh.praha.suchdol@seznam.cz">jsdh.praha.suchdol@seznam.cz</a></p>
+                </div>
+                <div class="col m-auto my-4 lead" align="center">
+                    <h2 class="lead"><b>Sbor dobrovolných hasičů</b></h2>
+                    <p>Starosta sboru: <b>Oldřich Bradáč</b></p>
+                    <p>Telefon: <a href="tel:+420 724 942 134">+420 724 942 134</a></p>
+                    <p>E-mail: <a href="mailto:sdh.suchdol@email.cz">sdh.suchdol@email.cz</a></p>
+                </div>
+            </div>
+            
+        </footer>
+            
+        
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="dark-mode.js"></script>
+        <!-- MOBILE CLOSE MENU AFTER CLICK -->
+        <script>
+            
+//            var MEDIUM_RESIZE_CONSTANT = 754;
+//            
+//            window.onresize = mobileMenuClose;
+//            
+//            var menuButton = document.getElementById('menuButton');
+//            var navLinks = document.querySelectorAll('closable');
+//            var menuToggle = document.getElementById('navbarSupportedContent');
+//            var bsCollapse = new bootstrap.Collapse(menuToggle);
+//            
+//            function mobileMenuClose(){
+//                if(document.body.clientWidth < MEDIUM_RESIZE_CONSTANT){
+//                    
+//                    navLinks.forEach((l) => {
+//                        l.addEventListener('click', bootstrapMenuToggle, false);
+//                    });
+//                }else{
+//                    navLinks.forEach((l) =>{
+//                        l.removeEventListener('click', bootstrapMenuToggle, false);
+//                    })
+//                }
+//            }
+//            
+//            function bootstrapMenuToggle(){
+//                bsCollapse.toggle();
+//                menuButton.classList.toggle('active');
+//            }
+//            mobileMenuClose();
+            
+            
+        </script>
+    </body>
+</html>
