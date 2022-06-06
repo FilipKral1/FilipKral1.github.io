@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Hasiči Praha Suchdol</title>
+        <link rel="icon" href="https://hasis2.000webhostapp.com/images/icon.png"/>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="dark-mode.css"/>
+        <style>
+            /*BASIC STYLE*/
+            path{
+                transition: 0.3s ease;
+            }
+            #facebook svg:hover path{
+                fill: #4267B2;
+            }
+            #instagram svg:hover path{
+                fill: #C13584;   
+            }
+            
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:#000;
+  stroke-width:5.5;
+  stroke-linecap:round;
+}
+            
+            .ham6 .top {
+  stroke-dasharray: 40 172;
+}
+.ham6 .middle {
+  stroke-dasharray: 40 111;
+}
+.ham6 .bottom {
+  stroke-dasharray: 40 172;
+}
+#menuButton.active .ham6 .top {
+  stroke-dashoffset: -132px;
+}
+#menuButton.active .ham6 .middle {
+  stroke-dashoffset: -71px;
+}
+#menuButton.active .ham6 .bottom {
+  stroke-dashoffset: -132px;
+}
+            #sun-fill, #moon{
+                display: inline-block;
+            }
+            #sun, #moon-fill{
+                display: none;
+            }
+            
+            #darkSwitch[type=checkbox]:checked + #sun{
+                display: inline-block;
+            }
+            #darkSwitch[type=checkbox]:checked + svg + #sun-fill{
+                display: none;
+            }
+            #darkSwitch[type=checkbox]:checked + svg + svg + #moon{
+                display: none;
+            }
+            #darkSwitch[type=checkbox]:checked + svg + svg + svg + #moon-fill{
+                display: inline-block;
+            }
+            
+            
+            
+            /* PAGE STYLE */
+            
+            
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        
+        <!-- MENU -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://hasis2.000webhostapp.com/images/icon.png" alt="" width="32" height="30" class="d-inline-block align-text-top">
+      Hasiči Praha Suchdol
+    </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="menuButton" onclick="this.classList.toggle('active')">
+      
+      <svg class="ham ham6" viewBox="0 0 100 100" width="30">
+  <path
+        class="line top"
+        d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+  <path
+        class="line middle"
+        d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+  <path
+        class="line bottom"
+        d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+</svg>
+      
+      </button>
+      
+      <!-- MENU LINKS -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sbor
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item closable" href="sbor.html">Sbor</a></li>
+            <li><a class="dropdown-item" href="#">Historie</a></li>
+              <li><a class="dropdown-item" href="memorialFM.html">Memoriál Františka Malého</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Jednotka
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Jednotka</a></li>
+            <li><a class="dropdown-item" href="#">Technika</a></li>
+            <li><a class="dropdown-item disabled" href="#">Výjezdy</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tab-index="-1" aria-disabled="true">Galerie</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link closable" href="#kontakty">Kontakty</a>
+        </li>
+            <li class="nav-item pe-5 d-flex aligns-items-center">
+                <div class="form-check form-switch pt-2" id="dayNightButton">
+  <input class="form-check-input" type="checkbox" id="darkSwitch">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="sun" viewBox="0 0 16 16">
+  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+</svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="sun-fill" viewBox="0 0 16 16">
+  <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+</svg>
+      /
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="moon" viewBox="0 0 16 16">
+  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+</svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="moon-fill" viewBox="0 0 16 16">
+  <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+</svg>
+</div>
+
+            </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        
+        
+        <!-- CONTENT -->
+        
+        <h1 class="display-4 m-4">Historie sboru</h1>
+        <p class="m-4">Snaha o založení dobrovolného hasičského sboru v Suchdole vyvrcholila v roce 1890, v době, kdy se naše obec ještě jmenovala Sukdol, za přispění tehdejšího starosty obce pana Antonína FUKSY, který tímto doporučil ustavit „výbor k ochraně životů a majetku svých i svých bližních“.
+        <br/><br/>
+První ustavující schůze sboru se konala dne 13. července 1890.
+<br/><br/>
+Velitelem byl zvolen Josef SKRČENÝ, podvelitelem Emil DIAMANT, jednatelem Václav ŽILINA, pokladníkem Josef SKRČENÝ, a za členy výboru Václav HÁLEK, Jan RÝVORA, František SKRČENÝ, Václav ŠÍCHA, Josef BRZYBOHATÝ, a za revizory účtů Josef ČÍŽEK a František SRBEK.
+<br/><br/>
+V té době byla naše obec ještě malá, měla jenom 61 domků, kde žilo ve 106 rodinách 518 obyvatel. Činnost se přesto rozvíjela a získávala další příznivce. Nebyly to lehké časy ani podmínky. Pokud měl hasičský sbor plnit své poslání, bylo nutné trpělivě shánět finanční prostředky na vybavení sboru a jak u vrchnosti nebo malých živnostníků, či jinak finančně zajištěných občanů, neboť chudina, krmě pracovitých rukou a dobrého srdce tyto prostředky neměla.
+<br/><br/>
+Jak se postupem let obec rozrůstala, byly i příznivější podmínky pro činnost sboru. V roce 1900 měla naše obec již 86 domků se 745 obyvateli. Za dalších 11 let to bylo již 125 budov a přes 920 obyvatel. Počet obytných budov a obyvatel se stále rozrůstal a tak hasičský sbor kromě svých úkolů začal pracovat i na poli kulturně společenském. Založil ochotnický divadelní kroužek. Pomocí kulturních akcí, které měly nejen pobavit, hlavně pomáhali vylepšit svou tíživou finanční situaci. Podle neúplných záznamů nastudovali členové sboru asi 21 divadelních her, ale podle pamětníků byla činnost v tomto směru daleko bohatší.
+<br/><br/>
+Poslední protokol o činnosti sboru v době před první světovou válkou je z 11. 7. 1914. Činnost sboru je opět známa až z prvního zápisu ze dne 24.12.1918 a řádná hromada se konala 26.1.1919. Na tomto zasedání v již osvobozené vlasti byl jako první velitel sboru zvolen Josef VEJDOVEC.
+V následujícím roce 1920, kdy sbor dovršil 30 let trvání, oslavil jej veřejným cvičením. Činnost sboru se dále zdokonalovala a zkvalitňovala. Vznikla potřeba výstavby nové hasičské zbrojnice, neboť stávající již nevyhovovala. Dne 3. července 1927 byl položen základní kámen a příštího roku – 30. září 1928 – byla nově postavená zbrojnice (v nynější ulici Ke Kozím hřbetům) předána k užívání. Zemský úřad tehdy poskytl finanční dar ve výši 1 000,- Kč.</p>
+        <h1 class="display-5 m-4">30. léta</h1>
+        <p class="m-4">
+            V 30. letech měla naše obec již na 500 obytných budov a přes 3,5 tisíce obyvatel. V této době se sbor zúčastnil hašení požárů doma v obci i v okolních obcích, tj. v Roztokách, Úněticích, Kamýku, Lysolajích, Horoměřicích. Škody způsobené požárem byly na tehdejší dobu značné, neboť se vážila každá koruna a vrcholila hospodářská krize, při níž bylo v naší obci přes 400 nezaměstnaných.
+<br/><br/>
+Největší požár byl zaznamenán 11. 10. 1933 na Suchdole, kdy hořel velkostatek nájemce Laciny, při němž pracovaly tři stříkačky a čerpala se voda až od Trojanova mlýna z údolí. Kromě toho 10 párů koní dováželo povozy vodu do rezervoáru a hasilo se plných 10 dnů.
+<br/><br/>
+Kromě hašení se sbor zúčastnil různých hasičských cvičení, sjezdů a slavností. Tato okrsková klání byla vždy důkladnou prověrkou a každému sboru záleželo na čestném umístění. Soutěžilo se na Suchdole, v Sedleci, Horoměřicích, Roztokách, Úholičkách, Řepích, Nebušicích, Středoklukách a v Žalově.
+Suchdolští hasiči získávali vždy to nejlepší ocenění. Za svou obětavou práci byla sboru tehdejší hasičskou župou věnována subvence v částce 4 500,- Kč.
+<br/><br/>
+V roce 1938, kdy nastala mobilizace – pro národ nejsmutnější doba, konal náš hasičský sbor od 25. září plnou pohotovostní službu ve dne i v noci. Organizační systém sboru byl však plně omezen a tak veškerá činnost byla zaměřena pouze na údržbu požární techniky a její provozuschopnosti.
+<br/><br/>
+Jelikož hasičská činnost nebyla za okupace zrušena, plnil i náš sbor své úkoly při ochraně majetku. V březnu roku 1940 se zúčastnil záchranných prací při velké jarní povodni v Praze. V této době byly tyto akce velice náročné, neboť provoz požárních motorových vozů byl pro nedostatek pohonných hmot do značné míry omezen.
+        </p>
+        <h1 class="display-5 m-4">
+        Po 2. světové válce
+        </h1>
+        <p class="m-4">
+            Kus dobré práce odvedl náš sbor i ve dnech revoluce v roce 1945. Podle suchdolské kroniky byli členové sboru ve službě od 5. května 1945 do 19. května 1945. Svou strážnici měli přímo ve škole. Zúčastnili se odzbrojení německé vojenské stráže ve dvoře, převzali pořádkovou službu v okolí školy, spolupůsobili při střežení několika kolon zajaté německé posádky, zúčastnili se odklízení dvou železničních vagónů v Dejvicích u vlečky do sladovny, které tam byly strženy ze železničního mostu, aby zatarasily příchodovou cestu z Roztok do Prahy, prohledali Roztocký háj a odstranili zanechané střelivo, aby se nedostalo do rukou dětem a zamezili tak případným zraněním.
+<br/><br/>
+V poválečných letech byl proveden nábor občanů pro práci v hasičství, který měl za hlavní úkol omladit zásahovou četu. Plánů a tím i práce bylo dost. Od roku 1946 byly z popudu MNV stanoveny žňové hlídky na ochranu úrody, které se pak při žních každoročně opakovaly. Při budování osvobozené vlasti věnoval sbor každoročně větší počet brigádnických hodin k zvelebování obce a vlasti. V roce 1950 dochází k vypracování hasebního plánu v obci, aby tak byla zajištěna ještě lepší pohotovost pro případ požáru. Začalo se také s pracemi spojenými s vybudováním požární nádrže v prostoru Starého Suchdola u statku /nynější ulice Pod Rybníčkem/, kde je trvalý přítok vody.
+<br/><br/>
+Těsně po válce byla vybudována nynější hasičská zbrojnice vedle budovy místního úřadu. V roce 1955 byla dokončena dřevěná věž „lezačka“, která sloužila jak k sušení hadic, tak i k výcviku slézání pater budov. Protože se činnost sboru stále rozšiřovala a vybavování se zlepšovalo, bylo v roce 1951 vybudováno skladiště pohonných látek, byla instalována elektrická poplachová siréna a sbor se stal jedním z nejlépe vybavených a pohotových sborů ve svém okrese.
+<br/><br/>
+Od podzimu do konce roku 1958 spolupracovali mnozí členové sboru na výstavbě nástavby zbrojnice, kde bylo dlouhou dobu zdravotní středisko pro děti. Další etapa dostavby zbrojnice proběhla v letech 1986 – 1987, kdy byly vystavěny směrem do dvora další garáže a nad nimi byt pro potřeby sboru.
+<br/><br/>
+Trvalým a základním posláním sboru však po celá léta svého působení zůstalo jedno, čelit požárům a ostatním živelným pohromám. Žel, ani těchto strastí nebyli naši občané uchráněni a oheň a voda si vybíraly svoji daň.
+<br/><br/>
+Ale to je již jiná kapitola.
+        </p>
+        <div class="table-responsive p-3 m-4">
+        <table class="table table-striped table-bordered align-middle">
+            <thead class="table-light text-center">
+                <tr>
+                    <th colspan="2">Starostové</th>
+                    <th colspan="2">Velitelé</th>
+                </tr>
+                <tr>
+                    <th>Jméno a příjmení</th>
+                    <th>Období činnosti</th>
+                    <th>Jméno a příjmení</th>
+                    <th>Období činnosti</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr>
+                    <td>Josef SKRČENÝ</td>
+                    <td>1890</td>
+                    <td>Josef SKRČENÝ</td>
+                    <td>1890 - 1896</td>
+                </tr>
+                <tr>
+                    <td>? ? ?</td>
+                    <td> </td>
+                    <td>? ? ?</td>
+                    <td>? ?</td>
+                </tr>
+                <tr>
+                    <td>Václav HÁLEK</td>
+                    <td>1910 - 1914</td>
+                    <td>Antonín SADÍLEK</td>
+                    <td>1910</td>
+                </tr>
+                <tr>
+                    <td>Josef SKRČENÝ</td>
+                    <td>1918 - 1919</td>
+                    <td>Vojtěch VIDIM</td>
+                    <td>1919</td>
+                </tr>
+                <tr>
+                    <td>Jan LACINA</td>
+                    <td>1920 - 1925</td>
+                    <td>Josef VEJDOVEC</td>
+                    <td>1920 - 1928</td>
+                </tr>
+                <tr>
+                    <td>František URBAN</td>
+                    <td>1925 - 1938</td>
+                    <td>Václav REK</td>
+                    <td>1929 - 1932</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>František ČERNÝ</td>
+                    <td>1933</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>František POKORNÝ</td>
+                    <td>1934 - 1936</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>Antonín FRK</td>
+                    <td>1937 - 1938</td>
+                </tr>
+                <tr>
+                    <td>Antonín FRK</td>
+                    <td>1939 - 1944</td>
+                    <td>Josef VYŠÍN</td>
+                    <td>1939</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>Antonín ŘEHÁK</td>
+                    <td>1940</td>
+                </tr>
+                <tr>
+                    <td>Petr ČUDA</td>
+                    <td>1944 - 1947</td>
+                    <td>Václav JIRÁSEK</td>
+                    <td>1941 - 1947</td>
+                </tr>
+                <tr>
+                    <td>Jan ZVONAŘ</td>
+                    <td>1948 - 1959</td>
+                    <td>František KADLEC</td>
+                    <td>1948 - 1953</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>František KOHOUT</td>
+                    <td>1954 - 1959</td>
+                </tr>
+                <tr>
+                    <td>Václav FRK</td>
+                    <td>1960 - 1963</td>
+                    <td>Václav ŠUBRT</td>
+                    <td>1960 - 1965</td>
+                </tr>
+                <tr>
+                    <td>Jan ZVONAŘ</td>
+                    <td>1964 - 1969</td>
+                    <td>? ? ?</td>
+                    <td>1966</td>
+                </tr>
+                <tr>
+                    <td>Ladislav HERYNEK</td>
+                    <td>1970 - 1975</td>
+                    <td>Jaroslav HORÁK</td>
+                    <td>1967 - 1970</td>
+                </tr>
+                <tr>
+                    <td>František MALÝ</td>
+                    <td>1976 - 1984</td>
+                    <td>Jiří FALBER</td>
+                    <td>1971 - 1980</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>Jaroslav STÁREK</td>
+                    <td>1981 - 1982</td>
+                </tr>
+                <tr>
+                    <td>Václav HRUBÝ</td>
+                    <td>1985 - 1986</td>
+                    <td>Pavel CHÁBA</td>
+                    <td>1983 - 1994</td>
+                </tr>
+                <tr>
+                    <td>Václav KONTA</td>
+                    <td>1987 - 1988</td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>Václav ČÍŽEK</td>
+                    <td>1989 - 2012</td>
+                    <td>Milan KUČERA</td>
+                    <td>1995 - 2012</td>
+                </tr>
+                <tr>
+                    <td>Milan Kučera</td>
+                    <td>2012 - 2020</td>
+                    <td>Martin ČUDA</td>
+                    <td>2012 - 2016</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>Oldřich BRADÁČ</td>
+                    <td>2016 - 2020</td>
+                </tr>
+                <tr>
+                    <td>Oldřich BRADÁČ</td>
+                    <td>2020</td>
+                    <td>Jakub BÁRTA</td>
+                    <td>2020</td>
+                </tr>
+                <tr>
+                    <td>Šárka FRÁTRIKOVÁ</td>
+                    <td>2022</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+        <!-- KONTAKTY -->
+        
+        <footer id="kontakty">
+            <h1 class="display-4 m-4">Kontakty</h1>
+            <div class="row row-cols-1 row-cols-md-2 m-0 p-0">
+                <div class="w-100 my-4" align="center">
+                    <a id="facebook" class="m-5" href="https://www.facebook.com/sdh.suchdol/">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70" viewBox="0 0 50 50" style="fill: black;">
+                <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
+                </svg></a>
+                    
+                    <a id="instagram" class="m-5" href="https://www.instagram.com/hasici.suchdol/">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="70" height="70" viewBox="0 0 50 50" style="fill: black;">
+                    <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+                    </path>
+                </svg>
+             </a>
+                </div>
+                <div class="col m-auto my-4 lead" align="center">
+                    <h2 class="lead"><b>Jednotka sboru dobrovolných hasičů</b></h2>
+                    <p>Velitel jednotky: <b>Jakub Bárta</b></p>
+                    <p>Telefon: <a href="tel:+420 773 621 532">+420 773 621 532</a></p>
+                    <p>E-mail: <a href="mailto:jsdh.praha.suchdol@seznam.cz">jsdh.praha.suchdol@seznam.cz</a></p>
+                </div>
+                <div class="col m-auto my-4 lead" align="center">
+                    <h2 class="lead"><b>Sbor dobrovolných hasičů</b></h2>
+                    <p>Starosta sboru: <b>Oldřich Bradáč</b></p>
+                    <p>Telefon: <a href="tel:+420 724 942 134">+420 724 942 134</a></p>
+                    <p>E-mail: <a href="mailto:sdh.suchdol@email.cz">sdh.suchdol@email.cz</a></p>
+                </div>
+            </div>
+            
+        </footer>
+            
+        
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="dark-mode.js"></script>
+    </body>
+</html>
