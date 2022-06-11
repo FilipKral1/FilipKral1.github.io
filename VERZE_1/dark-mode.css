@@ -113,16 +113,34 @@
 }
 
 
+/* MEMORIAL FM */
+
+[data-theme="dark"] .button_collapsable_checkmark{
+    color: #eee;
+    background-color: transparent;
+    border: 1px solid #eee;
+}
+[data-theme="dark"] .button_collapsable_checkmark:after{                
+    background-color: #eee;
+    color: #000;
+    padding-top: 6px;
+    border: 1px solid #eee;
+}
+[data-theme="dark"] .button_collapsable_container:hover input ~ .button_collapsable_checkmark{
+    background-color: #eee;
+    color: #000;
+}
+[data-theme="dark"] .button_collapsable_container:hover input ~ .button_collapsable_checkmark:after{
+    background-color: #222;
+    color: #eee;
+}
 
 
 /*
+
+
 [data-theme="dark"]
 
-
-[data-theme="dark"] th
-
-
-[data-theme="dark"] th
 
 */
 
